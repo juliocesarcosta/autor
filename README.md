@@ -15,7 +15,6 @@ Este projeto é uma aplicação Spring Boot para gerenciar autores em uma biblio
 ## Funcionalidades
 
 - **CRUD de Autores**: Criar, ler, atualizar e excluir registros de autores.
-- **Exportação de Dados**: Exporta dados modificados para um arquivo.
 
 Certifique-se de ter os seguintes itens instalados:
 
