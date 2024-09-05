@@ -13,6 +13,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
@@ -45,5 +46,8 @@ public class AutorServiceImplTest {
         // Verificar o resultado
         assertEquals("João", createdAutor.getNomeAutor());
         assertEquals("costa", createdAutor.getSobrenomeAutor());
+
+        // Verificar se o método save foi chamado com o objeto correto
+        verify(autorRepository).save(autor);
     }
 }
