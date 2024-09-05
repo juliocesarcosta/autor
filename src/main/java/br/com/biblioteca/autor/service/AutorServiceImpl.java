@@ -1,6 +1,6 @@
 package br.com.biblioteca.autor.service;
 
-import br.com.biblioteca.autor.model.Autor;
+import br.com.biblioteca.autor.model.AutorEntity;
 import br.com.biblioteca.autor.repository.AutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,23 +18,23 @@ public class AutorServiceImpl implements AutorService {
     }
 
     @Override
-    public List<Autor> getAllAutores() {
+    public List<AutorEntity> getAllAutores() {
         return autorRepository.findAll();
     }
 
     @Override
-    public Autor getAutorById(Long id) {
+    public AutorEntity getAutorById(Long id) {
         return autorRepository.findById(id).orElse(null);
     }
 
 
     @Override
-    public Autor createAutor(Autor autor) {
+    public AutorEntity createAutor(AutorEntity autor) {
         return autorRepository.save(autor);
     }
 
     @Override
-    public Autor updateAutor(Long id, Autor autor) {
+    public AutorEntity updateAutor(Long id, AutorEntity autor) {
         if (autorRepository.existsById(id)) {
             autor.setIdAutor(id);
             return autorRepository.save(autor);

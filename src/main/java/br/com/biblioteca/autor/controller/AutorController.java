@@ -1,6 +1,6 @@
 package br.com.biblioteca.autor.controller;
 
-import br.com.biblioteca.autor.model.Autor;
+import br.com.biblioteca.autor.model.AutorEntity;
 import br.com.biblioteca.autor.service.AutorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,25 +21,25 @@ public class AutorController {
     }
 
     @GetMapping
-    public List<Autor> getAllAutores() {
+    public List<AutorEntity> getAllAutores() {
         return autorService.getAllAutores();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Autor> getAutorById(@PathVariable Long id) {
-        Autor autor = autorService.getAutorById(id);
+    public ResponseEntity<AutorEntity> getAutorById(@PathVariable Long id) {
+        AutorEntity autor = autorService.getAutorById(id);
         return autor != null ? ResponseEntity.ok(autor) : ResponseEntity.notFound().build();
     }
 
     @PostMapping
-    public ResponseEntity<Autor> createAutor(@RequestBody Autor autor) {
-        Autor createdAutor = autorService.createAutor(autor);
+    public ResponseEntity<AutorEntity> createAutor(@RequestBody AutorEntity autor) {
+        AutorEntity createdAutor = autorService.createAutor(autor);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdAutor);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Autor> updateAutor(@PathVariable Long id, @RequestBody Autor autor) {
-        Autor updatedAutor = autorService.updateAutor(id, autor);
+    public ResponseEntity<AutorEntity> updateAutor(@PathVariable Long id, @RequestBody AutorEntity autor) {
+        AutorEntity updatedAutor = autorService.updateAutor(id, autor);
         return updatedAutor != null ? ResponseEntity.ok(updatedAutor) : ResponseEntity.notFound().build();
     }
 

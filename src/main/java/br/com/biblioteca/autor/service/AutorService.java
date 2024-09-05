@@ -1,13 +1,13 @@
 package br.com.biblioteca.autor.service;
 
-import br.com.biblioteca.autor.model.Autor;
+import br.com.biblioteca.autor.model.AutorEntity;
 
 import java.util.List;
 
 public interface AutorService {
-    List<Autor> getAllAutores();
-    Autor getAutorById(Long id);
-    Autor createAutor(Autor autor);
-    Autor updateAutor(Long id, Autor autor);
+    List<AutorEntity> getAllAutores();
+    AutorEntity getAutorById(Long id);
+    AutorEntity createAutor(AutorEntity autor);
+    AutorEntity updateAutor(Long id, AutorEntity autor);
     void deleteAutor(Long id);
 }
