@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto é uma aplicação Spring Boot para gerenciar autores em uma biblioteca. A aplicação fornece operações CRUD (Criar, Ler, Atualizar, Excluir) para a entidade `Autor` e inclui uma funcionalidade para exportar dados modificados para um arquivo.
+Este projeto é uma aplicação Spring Boot para gerenciar autores em uma biblioteca. A aplicação fornece operações CRUD (Criar, Ler, Atualizar, Excluir) para a entidade `Autor` 
 
 ## Tecnologias Utilizadas
 
