@@ -3,8 +3,8 @@
 ## Descrição
 
 Este projeto é uma aplicação Spring Boot para gerenciar autores em uma biblioteca. A aplicação fornece operações CRUD (Criar, Ler, Atualizar, Excluir) para a entidade `Autor` 
-Este projeto adota os princípios SOLID para garantir um código mais modular, flexível e fácil de manter. 1. Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única
-fiz Diagrama sequecial simples e objetivo.
+Este projeto adota os princípios SOLID para garantir um código mais modular, flexível e fácil de manter. 1. Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única.
+Fiz Diagrama sequecial simples e objetivo.
 
 ## Tecnologias Utilizadas
 
