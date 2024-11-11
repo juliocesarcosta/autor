@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "autor")
 @Data
@@ -20,4 +22,5 @@ public class AutorEntity {
     private String nomeAutor;
     @Column(name = "sobrenome_autor", nullable = false)
     private String sobrenomeAutor;
+
 }
