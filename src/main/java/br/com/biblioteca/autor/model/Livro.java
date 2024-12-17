@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_livro")
     private Long id;
 
     @Column(name = "titulo", nullable = false)

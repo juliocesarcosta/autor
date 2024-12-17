@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/autores")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AutorController {
 
     private final AutorService autorService;
@@ -33,8 +34,12 @@ public class AutorController {
 
     @PostMapping
     public ResponseEntity<AutorEntity> createAutor(@RequestBody AutorEntity autor) {
-        AutorEntity createdAutor = autorService.createAutor(autor);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdAutor);
+        try {
+            AutorEntity createdAutor = autorService.createAutor(autor);
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdAutor);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     @PutMapping("/{id}")
